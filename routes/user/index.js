@@ -34,7 +34,7 @@ router.post( '/signup', (request, response, next) => {
 })
 
 const authConfig = {
-  successRedirect: '/profile',
+  successRedirect: '/users/profile',
   failureRedirect: '/',
   failureFlash: true
 }

@@ -14,12 +14,10 @@ const User = {
   find: ( email, password ) => db.one( FIND_USER, [ email, password ] ),
 
   findById: ( id ) => {
-    console.log('id:', id)
     return db.one( FIND_BY_ID, [id] )
   },
 
   findByEmail: ( email ) => {
-    console.log('email:', email)
     return db.one( FIND_BY_EMAIL, [email] )
   },
 
@@ -35,7 +33,7 @@ const User = {
   },
 
   validPassword: ( inputPassword, foundDatabasePassword ) =>
-     bcrypt.compareSync(password, foundDatabasePassword )
+     bcrypt.compareSync(inputPassword, foundDatabasePassword )
 }
 
 
