@@ -2,9 +2,8 @@ const express = require( 'express' )
 const router = express.Router()
 // const db = require( '../database/db')
 
-console.log('Hello im in router/index')
 router.get('/', (req, res) => {
-  res.send("Hello World!")
+  res.render("index", { title: "Ripple",  message: req.flash('signupMessage') })
 })
 
 module.exports = router
